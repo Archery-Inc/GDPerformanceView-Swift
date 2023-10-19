@@ -77,9 +77,6 @@ internal class PerformanceView: UIWindow, PerformanceViewConfigurator {
     
     required internal init() {
         super.init(frame: PerformanceView.windowFrame(withPrefferedHeight: Constants.prefferedHeight))
-        if #available(iOS 13, *) {
-            self.windowScene = PerformanceView.keyWindowScene()
-        }
         
         self.configureWindow()
         self.configureMonitoringTextLabel()
